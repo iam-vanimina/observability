@@ -1,12 +1,20 @@
 
 Grafana complete view for Roboshop project:
+---------------------------------------------------------------------------------------------------------------------------
 
 
 <img width="931" height="475" alt="image" src="https://github.com/user-attachments/assets/88f33b41-7202-48fe-ab84-483ccd83807a" />
 
+---------------------------------------------------------------------------------------------------------------------------
+
+kubernetes-cluster-overview:
+----------------------------------------------------------------------------------------------------------------------------
 
 <img width="944" height="466" alt="image" src="https://github.com/user-attachments/assets/f8bd1daf-0fe4-4c61-90e1-7e5fc061b499" />
+-----------------------------------------------------------------------------------------------------------------------------
+save below file as kubernetes-cluster-overview.json
 
+open your grafana dashboard in right corner click on new and click on import  and import file kubernetes-cluster-overview.json
 
 ```
 {
@@ -320,7 +328,11 @@ Grafana complete view for Roboshop project:
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <img width="954" height="470" alt="image" src="https://github.com/user-attachments/assets/f238c39b-c603-45ee-b59a-3e56c6e79e01" />
+--------------------------------------------------------------------------------------------------------------------------
 
+save below file as roboshop-application-overview.json
+open your grafana dashboard in right corner click on new and click on import and import file roboshop-application-overview.json
+---------------------------------------------------------------------------------------------------------------------------
 ```
 {
   "id": null,
@@ -674,3 +686,4 @@ Grafana complete view for Roboshop project:
   ]
 }
 ```
+---------------------------------------------------------------------------------------------------------------------------
