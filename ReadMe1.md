@@ -3,10 +3,18 @@ Grafana complete view for Roboshop project:
 
 
 <img width="931" height="475" alt="image" src="https://github.com/user-attachments/assets/88f33b41-7202-48fe-ab84-483ccd83807a" />
+-----------------------------------------------------------------------------------------------------------
+
+kubernetes-cluster-overview:
+----------------------------
+--------------------------------------------------------------------------------------------------------
+<img width="1918" height="531" alt="image" src="https://github.com/user-attachments/assets/f722660c-7ca4-4c0f-b474-1d95b48a66d3" />
+
+-----------------------------------------------------------------------------------------------------------
+login into your grafana , In home click on dashboard, go top right corner, clcik on  new as shown above and click on import kubernetes-cluster-overview.json (which we have created in our repository)  
 
 
-<img width="944" height="466" alt="image" src="https://github.com/user-attachments/assets/f8bd1daf-0fe4-4c61-90e1-7e5fc061b499" />
-
+---------------------------------------------------------------------------------------------------------
 
 ```
 {
@@ -318,9 +326,20 @@ Grafana complete view for Roboshop project:
   "version": 2
 }
 ```
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<img width="1908" height="957" alt="image" src="https://github.com/user-attachments/assets/2296b181-5070-4c9c-bc8e-46e1efd10763" />
+-----------------------------------------------------------------------------------------------------------
 
+<img width="944" height="466" alt="image" src="https://github.com/user-attachments/assets/f8bd1daf-0fe4-4c61-90e1-7e5fc061b499" />
+
+------------------------------------------------------------------------------------------------------------
+
+Roboshop Logs Overview:
+-----------------------
+--------------------------------------------------------------------------------------------------------
+<img width="1918" height="531" alt="image" src="https://github.com/user-attachments/assets/f722660c-7ca4-4c0f-b474-1d95b48a66d3" />
+
+-----------------------------------------------------------------------------------------------------------
+login into your grafana , In home click on dashboard, go top right corner, clcik on  new as shown above and click on import kubernetes-logs-overview.json (which we have created in our repository)  
+--------------------------------------------------------------------------------------------------------------
 
 ```
 {
@@ -675,3 +694,7 @@ Grafana complete view for Roboshop project:
   ]
 }
 ```
+Finally kuberenetes logs view: 
+-----------------------------------------------------------------------------------------------------------
+<img width="1908" height="957" alt="image" src="https://github.com/user-attachments/assets/2296b181-5070-4c9c-bc8e-46e1efd10763" />
+-----------------------------------------------------------------------------------------------------------
