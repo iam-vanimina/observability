@@ -328,7 +328,8 @@ login into your grafana , In home click on dashboard, go top right corner, clcik
 }
 ```
 -----------------------------------------------------------------------------------------------------------
-
+Finaly kubernetes-cluster-overview:
+----------------------------
 <img width="944" height="466" alt="image" src="https://github.com/user-attachments/assets/f8bd1daf-0fe4-4c61-90e1-7e5fc061b499" />
 
 ------------------------------------------------------------------------------------------------------------
