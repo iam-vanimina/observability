@@ -751,7 +751,8 @@ Finally kuberenetes logs view:
 -----------------------------------------------------------------------------------------------------------
 <img width="1885" height="937" alt="image" src="https://github.com/user-attachments/assets/ade2e01d-91df-4eaa-ac5e-fb13b0f379b6" />
 -----------------------------------------------------------------------------------------------------------
-logs drill down using label error: 
+
+**logs drill down using label error: **
 
 <img width="1861" height="946" alt="image" src="https://github.com/user-attachments/assets/7fc6d208-2150-42b6-91c1-bacdd4c28a73" />
 
