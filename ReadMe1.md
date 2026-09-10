@@ -698,5 +698,6 @@ login into your grafana , In home click on dashboard, go top right corner, clcik
 ```
 Finally kuberenetes logs view: 
 -----------------------------------------------------------------------------------------------------------
-<img width="1908" height="957" alt="image" src="https://github.com/user-attachments/assets/2296b181-5070-4c9c-bc8e-46e1efd10763" />
+<img width="1885" height="937" alt="image" src="https://github.com/user-attachments/assets/ade2e01d-91df-4eaa-ac5e-fb13b0f379b6" />
+-----------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------
