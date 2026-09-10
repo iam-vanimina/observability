@@ -1,5 +1,6 @@
 
 Grafana complete view for Roboshop project:
+-------------------------------------------
 
 
 <img width="931" height="475" alt="image" src="https://github.com/user-attachments/assets/88f33b41-7202-48fe-ab84-483ccd83807a" />
