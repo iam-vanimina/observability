@@ -319,7 +319,8 @@ Grafana complete view for Roboshop project:
 }
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<img width="954" height="470" alt="image" src="https://github.com/user-attachments/assets/f238c39b-c603-45ee-b59a-3e56c6e79e01" />
+<img width="1908" height="957" alt="image" src="https://github.com/user-attachments/assets/2296b181-5070-4c9c-bc8e-46e1efd10763" />
+
 
 ```
 {
