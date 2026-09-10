@@ -345,24 +345,7 @@ login into your grafana , In home click on dashboard, go top right corner, clcik
 
 ```
 {
-  "id": null,
-  "uid": "roboshop-logs",
-  "title": "Roboshop Logs Overview",
-  "tags": [
-    "roboshop",
-    "loki",
-    "logs"
-  ],
-  "timezone": "",
-  "schemaVersion": 39,
-  "version": 1,
-  "editable": true,
-  "refresh": "30s",
-  "graphTooltip": 1,
-  "time": {
-    "from": "now-1h",
-    "to": "now"
-  },
+  "$schema": "https://json.schemastore.org/grafana-dashboard.json",
   "annotations": {
     "list": [
       {
@@ -379,321 +362,389 @@ login into your grafana , In home click on dashboard, go top right corner, clcik
       }
     ]
   },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "id": null,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "All Roboshop Logs",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 10
+      },
+      "id": 2,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\"} |~ \"(?i)error|exception|failed|fatal\"",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Errors",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 10
+      },
+      "id": 3,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\"} |~ \"(?i)warn|warning\"",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Warnings",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 20
+      },
+      "id": 4,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"frontend\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Frontend",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 20
+      },
+      "id": 5,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"catalogue\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Catalogue",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 30
+      },
+      "id": 6,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"cart\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Cart",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 30
+      },
+      "id": 7,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"payment\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Payment",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 0,
+        "y": 40
+      },
+      "id": 8,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"shipping\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Shipping",
+      "type": "logs"
+    },
+    {
+      "datasource": {
+        "type": "loki",
+        "uid": "${DS_LOKI}"
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 40
+      },
+      "id": 9,
+      "options": {
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
+        "showLabels": true,
+        "showTime": true,
+        "sortOrder": "Descending",
+        "wrapLines": true
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "loki",
+            "uid": "${DS_LOKI}"
+          },
+          "editorMode": "code",
+          "expr": "{namespace=\"$namespace\", app=\"dispatch\"}",
+          "queryType": "range",
+          "refId": "A"
+        }
+      ],
+      "title": "Dispatch",
+      "type": "logs"
+    }
+  ],
+  "refresh": "30s",
+  "schemaVersion": 39,
+  "tags": [
+    "roboshop",
+    "loki",
+    "logs"
+  ],
   "templating": {
     "list": [
       {
-        "name": "DS_LOKI",
+        "current": {},
+        "includeAll": false,
         "label": "Loki",
-        "type": "datasource",
+        "multi": false,
+        "name": "DS_LOKI",
+        "options": [],
         "query": "loki",
         "refresh": 1,
-        "current": {},
-        "options": [],
-        "includeAll": false,
-        "multi": false
+        "type": "datasource"
       },
       {
-        "name": "namespace",
-        "label": "Namespace",
-        "type": "custom",
-        "query": "roboshop",
         "current": {
+          "selected": true,
           "text": "roboshop",
           "value": "roboshop"
         },
+        "includeAll": false,
+        "label": "Namespace",
+        "multi": false,
+        "name": "namespace",
         "options": [
           {
+            "selected": true,
             "text": "roboshop",
-            "value": "roboshop",
-            "selected": true
+            "value": "roboshop"
           }
         ],
-        "includeAll": false,
-        "multi": false
+        "query": "roboshop",
+        "type": "custom"
       }
     ]
   },
-  "panels": [
-    {
-      "id": 1,
-      "type": "logs",
-      "title": "All Roboshop Logs",
-      "gridPos": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 2,
-      "type": "logs",
-      "title": "Errors",
-      "gridPos": {
-        "x": 0,
-        "y": 10,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\"} |~ \"(?i)error|exception|failed|fatal\"",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 3,
-      "type": "logs",
-      "title": "Warnings",
-      "gridPos": {
-        "x": 12,
-        "y": 10,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\"} |~ \"(?i)warn|warning\"",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 4,
-      "type": "logs",
-      "title": "Frontend",
-      "gridPos": {
-        "x": 0,
-        "y": 20,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"frontend\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 5,
-      "type": "logs",
-      "title": "Catalogue",
-      "gridPos": {
-        "x": 12,
-        "y": 20,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"catalogue\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 6,
-      "type": "logs",
-      "title": "Cart",
-      "gridPos": {
-        "x": 0,
-        "y": 30,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"cart\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 7,
-      "type": "logs",
-      "title": "Payment",
-      "gridPos": {
-        "x": 12,
-        "y": 30,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"payment\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 8,
-      "type": "logs",
-      "title": "Shipping",
-      "gridPos": {
-        "x": 0,
-        "y": 40,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"shipping\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    },
-    {
-      "id": 9,
-      "type": "logs",
-      "title": "Dispatch",
-      "gridPos": {
-        "x": 12,
-        "y": 40,
-        "w": 12,
-        "h": 10
-      },
-      "datasource": {
-        "type": "loki",
-        "uid": "loki"
-      },
-      "targets": [
-        {
-          "refId": "A",
-          "expr": "{namespace=\"$namespace\", app=\"dispatch\"}",
-          "queryType": "range"
-        }
-      ],
-      "options": {
-        "showTime": true,
-        "showLabels": true,
-        "showCommonLabels": false,
-        "wrapLines": true,
-        "prettifyLogMessage": false,
-        "enableLogDetails": true,
-        "sortOrder": "Descending"
-      }
-    }
-  ]
+  "time": {
+    "from": "now-1h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Roboshop Logs Overview",
+  "uid": "roboshop-logs",
+  "version": 1
 }
 ```
 Finally kuberenetes logs view: 
