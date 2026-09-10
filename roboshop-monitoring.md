@@ -1123,7 +1123,20 @@ login into your grafana , In home click on dashboard, go top right corner, clcik
 }
 
 ```
-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+
+Metrics:
+------------------------------------------------------------------------------------------------------------
+
+If We can drill down to metrics where as filters with label and value, we can see insights. In our case,
+service=catalogue , from below image we can understand where the catalogue service on which instance and 
+namespace etc...
+
+
+<img width="1912" height="940" alt="image" src="https://github.com/user-attachments/assets/d93f6508-c7e4-476b-a845-3d0c06d8d7f7" />
+
+
+------------------------------------------------------------------------------------------------------------
 
 
 Author: Venkata Ram Vanimina
