@@ -1,4 +1,40 @@
+## 📊 Monitoring
 
+The Roboshop application is monitored using **Prometheus, Grafana, Loki, and Grafana Alloy**.
+
+### Monitoring Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │   Roboshop Apps     │
+                    │                     │
+                    │ frontend            │
+                    │ catalogue           │
+                    │ cart                │
+                    │ payment             │
+                    │ shipping            │
+                    │ dispatch            │
+                    └──────────┬──────────┘
+                               │
+                  ┌────────────┴────────────┐
+                  │                         │
+               Metrics                    Logs
+                  │                         │
+                  ▼                         ▼
+            ┌───────────┐             ┌───────────┐
+            │ Prometheus│             │   Alloy   │
+            └─────┬─────┘             └─────┬─────┘
+                  │                         │
+                  │                         ▼
+                  │                    ┌───────────┐
+                  │                    │   Loki    │
+                  │                    └─────┬─────┘
+                  │                          │
+                  └──────────┬───────────────┘
+                             ▼
+                       ┌───────────┐
+                       │  Grafana  │
+                       └───────────┘
 Grafana complete view for Roboshop project:
 -------------------------------------------
 
