@@ -1,3 +1,4 @@
+```
 venka@Think-VVRAM MINGW64 ~
 $ kubectl exec -n roboshop mongodb-9f4d77799-9z9fp -- \
   mongosh --quiet --eval "show dbs"
@@ -8299,3 +8300,4 @@ $ ^C
 
 venka@Think-VVRAM MINGW64 /c/azure/roboshop/monitoring/observability (main)
 $
+```
